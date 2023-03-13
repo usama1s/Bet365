@@ -12,6 +12,8 @@ body {
   overflow: overlay;
   scroll-behavior: smooth;
   background: var(--backgroundSecondary);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -129,6 +131,20 @@ table .col {
   }
   #footer {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 979px) {
+  #footerend {
+    flex-direction: column;
+  }
+  #footerend .col-7 {
+    width: 100%;
+  }
+  #footerend .col-3 {
+    width: 100%;
+    justify-content: center;
+    padding: 0 30px;
   }
 }
 
