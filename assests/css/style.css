@@ -1,0 +1,160 @@
+:root {
+  --backgroundPrimary: rgba(39, 65, 83, 0.9);
+  --backgroundSecondary: rgba(39, 65, 83, 1);
+  --backgroundThird: #0c2335;
+  --textPrimary: #ffc107;
+  --textWhite: #fff;
+  --buttonPrimary: #ffc207;
+}
+
+body {
+  min-width: 350px;
+  overflow: overlay;
+  scroll-behavior: smooth;
+  background: var(--backgroundSecondary);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(39, 65, 83, 1);
+}
+
+#event {
+  display: none;
+}
+
+#navclose {
+  /* display: none; */
+  padding: 10px 0;
+  justify-content: end;
+  font-size: 20px;
+}
+
+nav ul img {
+  width: 15px !important;
+}
+
+.smallmenu {
+  display: block !important;
+  width: 25% !important;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  transition: all 0.3s ease-in;
+  height: 100vh;
+}
+
+.show {
+  display: block !important;
+}
+
+table .col {
+  color: var(--textWhite);
+}
+
+#nav_overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+#navmenu {
+  display: none;
+}
+
+#navbars {
+  cursor: pointer;
+}
+
+#navclose {
+  display: flex;
+  cursor: pointer;
+}
+
+#footer {
+  justify-content: space-around;
+  background: var(--backgroundThird);
+  padding: 40px 20px;
+  border-radius: 6px;
+}
+
+#footer a {
+  padding: 10px 10px;
+}
+
+#footer a:hover {
+  background: var(--backgroundPrimary);
+}
+
+#footerdropdown a:hover {
+  background: var(--backgroundThird);
+}
+
+@media (max-width: 1200px) {
+  #body {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #midbody {
+    width: 100%;
+  }
+  #lastbody {
+    width: 100%;
+  }
+  #navbars {
+    display: block;
+  }
+  .smallmenu {
+    width: 35% !important;
+  }
+  #body {
+    gap: 3;
+  }
+  #footer {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 878px) {
+  #body {
+    flex-direction: column;
+  }
+  #midbody {
+    width: 100%;
+  }
+  #lastbody {
+    width: 100%;
+  }
+  .smallmenu {
+    width: 45% !important;
+  }
+  #footer {
+    justify-content: space-between;
+  }
+}
+
+.carousel-item {
+  min-height: 250px;
+}
+
+.carousel-item img {
+  min-height: 220px;
+  object-fit: cover;
+}
