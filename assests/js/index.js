@@ -7,13 +7,14 @@ const navicon = document.getElementById("navbars");
 const navmenu = document.getElementById("navmenu");
 const navclose = document.getElementById("navclose");
 const navoverlay = document.getElementById("nav_overlay");
+const popUp = document.getElementById("popup");
+const popupoverlay = document.getElementById("popup_overlay");
 
 featuredLink.addEventListener("click", showFeatured);
 eventsLink.addEventListener("click", showEvents);
 navicon.addEventListener("click", tooglemenu);
 navclose.addEventListener("click", tooglemenu);
 navoverlay.addEventListener("click", tooglemenu);
-
 
 function showFeatured() {
   topevent.style.display = "none";
@@ -32,4 +33,9 @@ function showEvents() {
 function tooglemenu() {
   navmenu.classList.toggle("smallmenu");
   navoverlay.classList.toggle("show");
+}
+
+function showpopUp() {
+  popUp.classList.toggle("show");
+  popupoverlay.classList.toggle("show");
 }

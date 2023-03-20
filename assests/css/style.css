@@ -2,6 +2,8 @@
   --backgroundPrimary: rgba(39, 65, 83, 0.9);
   --backgroundSecondary: rgba(39, 65, 83, 1);
   --backgroundThird: #0c2335;
+  --backgroundOfwhite: whitesmoke;
+  --backgroundWhite: #fff;
   --textPrimary: #ffc107;
   --textWhite: #fff;
   --buttonPrimary: #ffc207;
@@ -15,6 +17,11 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;
@@ -52,7 +59,7 @@ nav ul img {
 .smallmenu {
   display: block !important;
   width: 25% !important;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 20;
   transition: all 0.3s ease-in;
@@ -72,7 +79,17 @@ table .col {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+#popup_overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
   top: 0;
   background: rgb(0, 0, 0, 0.5);
 }
@@ -107,6 +124,26 @@ table .col {
 
 #footerdropdown a:hover {
   background: var(--backgroundThird);
+}
+
+#mobile_nav {
+  display: none;
+}
+
+#mobile_nav img {
+  width: 30px;
+}
+
+#popup {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  max-width: 600px;
+  max-height: 350px;
+  border-radius: 8px;
+  z-index: 120;
+  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -163,6 +200,29 @@ table .col {
   }
   #footer {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  #mobile_nav {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  #popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: whitesmoke;
+    max-width: 600px;
+    max-height: 350px;
+    border-radius: 8px;
+    z-index: 120;
+    display: none;
   }
 }
 
