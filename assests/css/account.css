@@ -1,0 +1,14 @@
+@media (max-width: 979px) {
+  #contact_div {
+    width: 100%;
+  }
+  #password_div {
+    width: 100%;
+  }
+  #verification_div {
+    width: 100%;
+  }
+  #residential_div {
+    width: 100%;
+  }
+}

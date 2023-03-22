@@ -14,7 +14,7 @@ body {
   overflow: overlay;
   scroll-behavior: smooth;
   background: var(--backgroundSecondary);
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -183,6 +183,15 @@ table .col {
     justify-content: center;
     padding: 0 30px;
   }
+  #balance {
+    flex-direction: column;
+  }
+  #balance .col-2 {
+    width: 100%;
+  }
+  #balance .col-10 {
+    width: 100%;
+  }
 }
 
 @media (max-width: 878px) {
@@ -206,6 +215,9 @@ table .col {
 @media (max-width: 576px) {
   #mobile_nav {
     display: block;
+  }
+  #balance button .h6 {
+    display: none;
   }
 }
 

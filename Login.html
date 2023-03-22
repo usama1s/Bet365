@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <title>Betting</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div
+      class="shadow-lg"
+      style="
+        background-color: var(--backgroundPrimary);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      "
+    >
+      <div
+        class="d-flex justify-content-between align-items-center p-2 text-white mb-3"
+      >
+        <i class="fa fa-bars" id="navbars"></i>
+        <img src="" alt="logo" />
+        <div>
+          <button class="btn" style="background: var(--buttonPrimary)">
+            Join
+          </button>
+          <button class="btn btn-transparent text-white">Login</button>
+        </div>
+      </div>
+    </div>
+    <!-- Main Body -->
+    <div class="nav_overlay" id="nav_overlay"></div>
+    <div class="d-flex" id="body">
+      <div
+        style="
+          height: 100vh;
+          background-color: var(--backgroundSecondary);
+          overflow-y: scroll;
+          color: var(--textWhite);
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          z-index: 120;
+        "
+        id="navmenu"
+      >
+        <nav class="p-3">
+          <i class="fa-solid fa-xmark" id="navclose"></i>
+          <div class="d-flex justify-content-between align-items-center">
+            <span>Offers</span>
+            <img src="./assests/img/offers.svg" alt="offers" />
+          </div>
+          <ul class="navbar-nav">
+            <h6 class="mt-3" style="color: var(--textPrimary)">
+              Frequently Visit
+            </h6>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/football.svg" alt="image" />
+              <a class="nav-link" href="#">Amercian Football</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/rules.svg" alt="image" />
+              <a class="nav-link" href="#">Australian Rules</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <h6 class="mt-3" style="color: var(--textPrimary)">Full List</h6>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/football.svg" alt="image" />
+              <a class="nav-link" href="#">Amercian Football</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/baseball.svg" alt="image" />
+              <a class="nav-link" href="#">Baseball</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/basketball.svg" alt="image" />
+              <a class="nav-link" href="#">Basketball</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/boxing.svg" alt="image" />
+              <a class="nav-link" href="#">Boxing</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/casino.svg" alt="image" />
+              <a class="nav-link" href="#">Casino</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/cricket.svg" alt="image" />
+              <a class="nav-link" href="#">Cricket</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/cycling.svg" alt="image" />
+              <a class="nav-link" href="#">Cycling</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/darts.svg" alt="image" />
+              <a class="nav-link" href="#">Darts</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/esports.svg" alt="image" />
+              <a class="nav-link" href="#">Esports</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/fantasy.svg" alt="image" />
+              <a class="nav-link" href="#">Fantasy Sports</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/formula1.svg" alt="image" />
+              <a class="nav-link" href="#">Formula 1</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/futsal.svg" alt="image" />
+              <a class="nav-link" href="#">Futsal</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/gaelic.svg" alt="image" />
+              <a class="nav-link" href="#">Gaelic Sports</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/golf.svg" alt="image" />
+              <a class="nav-link" href="#">Golf</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/greyhounds.svg" alt="image" />
+              <a class="nav-link" href="#">Greyhounds</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/horseriding.svg" alt="image" />
+              <a class="nav-link" href="#">Horse Racing</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/icehockey.svg" alt="image" />
+              <a class="nav-link" href="#">Ice Hockey</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/lotto.svg" alt="image" />
+              <a class="nav-link" href="#">Lotto</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/mma.svg" alt="image" />
+              <a class="nav-link" href="#">MMA</a>
+            </li>
+
+            <!-- Add dropdown -->
+
+            <div class="dropdown my-2">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Motor Sports
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="background: var(--backgroundThird)"
+              >
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/motorbikes.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Motorbikes</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/motorsport.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">NASCAR</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/motorsport.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#"
+                    >Other Motor Sports</a
+                  >
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/motorsport.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Supercars</a>
+                </li>
+              </ul>
+            </div>
+
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/politics.svg" alt="image" />
+              <a class="nav-link" href="#">Politics</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/pool.svg" alt="image" />
+              <a class="nav-link" href="#">Pool</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/rubyleague.svg" alt="image" />
+              <a class="nav-link" href="#">Rubgy League</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/rubyunion.svg" alt="image" />
+              <a class="nav-link" href="#">Rubgy Union</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/snooker.svg" alt="image" />
+              <a class="nav-link" href="#">Snooker</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/soccer.svg" alt="image" />
+              <a class="nav-link" href="#">Soccer</a>
+            </li>
+
+            <!-- Add dropdown -->
+            <div class="dropdown my-2">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Special
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="background: var(--backgroundThird)"
+              >
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">World</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Australia</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Denmark</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Itlay</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">North Amercia</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Sweden</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/special.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">United Kindom</a>
+                </li>
+              </ul>
+            </div>
+
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/speedway.svg" alt="image" />
+              <a class="nav-link" href="#">Speedway</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/tabletennis.svg" alt="image" />
+              <a class="nav-link" href="#">Table Tennis</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/tennis.svg" alt="image" />
+              <a class="nav-link" href="#">Tennis</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/trotting.svg" alt="image" />
+              <a class="nav-link" href="#">Trottling</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/virtualsports.svg" alt="image" />
+              <a class="nav-link" href="#">Virtual Sports</a>
+            </li>
+            <li class="d-flex gap-2 align-items-center">
+              <img src="./assests/img/volleyball.svg" alt="image" />
+              <a class="nav-link" href="#">Volleyball</a>
+            </li>
+            <div class="dropdown my-2">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Winter Sports
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="background: var(--backgroundThird)"
+              >
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/alpineskiiing.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Alpine Sking</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/biathlon.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Biathlon</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/crosscountryskiing.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#"
+                    >Cross Country Skiing</a
+                  >
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/skijumping.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Ski Jumping</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Second dropdown -->
+            <div class="dropdown my-2">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More Sports
+              </button>
+              <ul
+                class="dropdown-menu shadow-lg"
+                style="background: (--backgroundThird)"
+              >
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/badminton.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Badminton</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/bandy.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">bandy</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/beachvolleyball.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#"
+                    >Beach Volleyball</a
+                  >
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/curling.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Curling</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/floorball.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Floorball</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/handball.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Handball</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/lacrosse.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Lacrosse</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/pelota.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Pelota</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/squash.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Squash</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/sumo.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Sumo</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/surfing.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Surfing</a>
+                </li>
+                <li class="d-flex gap-2 align-items-center px-2">
+                  <img src="./assests/img/waterpolo.svg" alt="image" />
+                  <a class="dropdown-item text-white" href="#">Water Polo</a>
+                </li>
+              </ul>
+            </div>
+            <li>
+              <a class="nav-link" href="#">Odd on Cupon</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Top Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Mid Body -->
+      <div
+        class="px-5 py-5 my-4 shadow-lg rounded"
+        id="midbody"
+        style="
+          color: var(--textWhite);
+          margin: 0 auto;
+          background: var(--backgroundThird);
+        "
+      >
+        <h5>Having Trouble logging in?</h5>
+        <p>Please enter your username to help us identify your account</p>
+        <form>
+          <input class="form-control type="text" placeholder="username" />
+        </form>
+        <p style="font-size: 12px; margin-top: 8px">Forgotten your username?</p>
+        <button class="btn w-100 btn-success">Next</button>
+      </div>
+    </div>
+
+    <footer class="p-4 px-3" style="color: var(--textWhite)">
+      <div class="d-flex gap-5 flex-wrap" id="footer">
+        <ul class="navbar-nav">
+          <h5>Help</h5>
+          <li><a class="nav-link" href="#">Deposit</a></li>
+          <li><a class="nav-link" href="#">Withdrawals</a></li>
+          <li><a class="nav-link" href="#">FAQ</a></li>
+          <li><a class="nav-link" href="#">Term & Condition</a></li>
+          <li><a class="nav-link" href="#">Responsible Gambling</a></li>
+          <li><a class="nav-link" href="#">Technical Issue</a></li>
+          <li><a class="nav-link" href="#">Privacy Policy</a></li>
+          <li><a class="nav-link" href="#">Cookies Policy</a></li>
+          <li><a class="nav-link" href="#">Fair Payouts</a></li>
+          <li><a class="nav-link" href="#">Compalaints Procedure</a></li>
+          <li><a class="nav-link" href="#">Rules</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <h5>Form & Stats</h5>
+          <li><a class="nav-link" href="#">Sports & Betting New</a></li>
+          <li><a class="nav-link" href="#">Soccer Stats</a></li>
+          <li><a class="nav-link" href="#">Sports Stats</a></li>
+          <li><a class="nav-link" href="#">Horse Form</a></li>
+          <li><a class="nav-link" href="#">Horse Search </a></li>
+          <li><a class="nav-link" href="#">UK & Irish Racing Archive</a></li>
+          <li><a class="nav-link" href="#">Australian Horse Form </a></li>
+          <li><a class="nav-link" href="#">US Horse Form </a></li>
+          <li><a class="nav-link" href="#">UK & Irish Greyhound Form</a></li>
+          <li><a class="nav-link" href="#">Deposit</a></li>
+          <li><a class="nav-link" href="#">Deposit</a></li>
+          <li><a class="nav-link" href="#">Deposit</a></li>
+        </ul>
+        <div>
+          <ul class="navbar-nav">
+            <h5>Settings</h5>
+            <!-- Drop down -->
+            <div class="dropdown my-2" id="footerdropdown">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Language
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="background: var(--backgroundSecondary)"
+              >
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">English</a>
+                  <a class="dropdown-item text-white" href="#">繁體中文</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Español</a>
+                  <a class="dropdown-item text-white" href="#">Français</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Deutsch</a>
+                  <a class="dropdown-item text-white" href="#">Italiano</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Dansk</a>
+                  <a class="dropdown-item text-white" href="#">Svenska</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Norsk</a>
+                  <a class="dropdown-item text-white" href="#">简体中文</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Български</a>
+                  <a class="dropdown-item text-white" href="#">Ελληνικά</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Polski</a>
+                  <a class="dropdown-item text-white" href="#">Português</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Română</a>
+                  <a class="dropdown-item text-white" href="#">Česky</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Magyar</a>
+                  <a class="dropdown-item text-white" href="#">Slovenčina</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Nederlands</a>
+                  <a class="dropdown-item text-white" href="#">Eesti</a>
+                </li>
+                <li class="d-flex gap2 justify-content-between">
+                  <a class="dropdown-item text-white" href="#">Русский</a>
+                  <a class="dropdown-item text-white" href="#">日本語</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown my-2" id="footerdropdown">
+              <button
+                class="btn text-info dropdown-toggle btn-outline-none"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Odds Display
+              </button>
+              <ul
+                class="dropdown-menu"
+                style="background: var(--backgroundSecondary)"
+              >
+                <li>
+                  <a class="dropdown-item text-white" href="#">Fractional</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#">Decimal</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#">Amercian</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="#"
+                    >Amercian/Fractional</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </ul>
+          <ul class="navbar-nav mt-2">
+            <h5>Scores & Result</h5>
+            <li>
+              <a class="dropdown-item text-white" href="#">Live Scores</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Results</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mt-2">
+            <h5>Promotions</h5>
+            <li>
+              <a class="dropdown-item text-white" href="#"
+                >Open Account Offer</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Current Offers</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mt-2">
+            <h5>Audio</h5>
+            <li>
+              <a class="dropdown-item text-white" href="#">Horse Racing</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Greyhounds</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Soccers</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Cricket</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Six Nations</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="d-flex flex-wrap gap-3 justify-content-around px-5">
+      <img src="./assests/img/footerimages/GT_v2.svg" alt="footerimage" />
+      <img
+        src="./assests/img/footerimages/InternationalBettingIntegrity.svg"
+        alt="footerimage"
+      />
+      <img src="./assests/img/footerimages/Gibraltar.svg" alt="footerimage" />
+      <img src="./assests/img/footerimages/eCogra.svg" alt="footerimage" />
+      <img src="./assests/img/footerimages/18.svg" alt="footerimage" />
+    </div>
+
+    <div
+      class="d-flex gap-5 justify-content-start container mt-5"
+      style="color: whitesmoke"
+      id="footerend"
+    >
+      <div class="col-7">
+        <p>
+          Registered Office Hillside (International Sports) LP (registration
+          number 119), Unit 1.1, First Floor, Waterport Place, 2 Europort
+          Avenue, Gibraltar. Hillside (International Sports) LP is licensed by
+          the Government of Gibraltar and regulated by the Gibraltar Gambling
+          Commissioner (RGL number 076).
+        </p>
+        <span>© 2001-2023 bet365. All rights reserved.</span>
+        <span>Server Time 21:12:29 GMT+5</span>
+        <p>
+          By accessing, continuing to use or navigating throughout this site you
+          accept that we will use certain browser cookies to improve your
+          customer experience with us. bet365 only uses cookies which will
+          improve your experience with us and will not interfere with your
+          privacy. Please refer to our
+        </p>
+        <p>
+          <span>This site is protected by reCAPTCHA and the Google </span
+          ><span>Privacy Policy</span>
+          <span>and</span>
+          <span>Terms of Service</span>
+          <span>apply.</span>
+        </p>
+      </div>
+      <div class="col-3">
+        <div class="d-flex gap-3 justify-content-between">
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="#">Casino</a></li>
+            <li><a class="nav-link" href="#">Games</a></li>
+            <li><a class="nav-link" href="#">Bingo</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="#">Live Casino</a></li>
+            <li><a class="nav-link" href="#">Poker</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="color: whitesmoke">
+      <hr />
+      <div class="d-flex gap-2 justify-content-between">
+        <div>
+          <p class="d-flex gap-4">
+            <span><a class="nav-link" href="#">Careers</a></span>
+            <span><a class="nav-link" href="#">Parthers</a></span>
+          </p>
+        </div>
+        <div class="d-flex flex-row gap-3">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+            >
+              <path
+                class="fm-SVGComponent_SocialPath"
+                fill="#A7A7A7"
+                d="M21,10.5 C21,16.301249 16.301249,21 10.5,21 C4.69874972,21 0,16.301249 0,10.5 C0,4.69874972 4.69874972,0 10.5,0 C16.301249,0 21,4.69874972 21,10.5 Z M8.57849949,16.038749 C13.2352492,16.038749 15.7814991,12.1799993 15.7814991,8.83574947 C15.7814991,8.72549948 15.7814991,8.61524949 15.7762491,8.51024949 C16.269749,8.15324951 16.700249,7.70699954 17.041499,7.19774957 C16.589999,7.39724956 16.101749,7.53374955 15.5872491,7.59674955 C16.112249,7.28174957 16.511249,6.7882496 16.700249,6.19499963 C16.211999,6.48374961 15.6712491,6.6937496 15.0937491,6.80924959 C14.6317491,6.31574962 13.9754992,6.01124964 13.2457492,6.01124964 C11.8492493,6.01124964 10.7152494,7.14524957 10.7152494,8.54174949 C10.7152494,8.74124948 10.7362494,8.93549947 10.7834994,9.11924946 C8.67824948,9.01424946 6.81449959,8.00624952 5.56499967,6.47324961 C5.34974968,6.84599959 5.22374969,7.28174957 5.22374969,7.74374954 C5.22374969,8.62049949 5.66999966,9.39749944 6.35249962,9.84899941 C5.93774965,9.83849941 5.54924967,9.72299942 5.20799969,9.53399943 C5.20799969,9.54449943 5.20799969,9.55499943 5.20799969,9.56549943 C5.20799969,10.7939994 6.07949964,11.8124993 7.23974957,12.0487493 C7.02974958,12.1064993 6.80399959,12.1379993 6.57299961,12.1379993 C6.41024962,12.1379993 6.25274963,12.1222493 6.09524964,12.0907493 C6.41549962,13.0987492 7.34999956,13.8284992 8.4577495,13.8494992 C7.59149955,14.5267491 6.49949961,14.9309991 5.31299968,14.9309991 C5.1082497,14.9309991 4.90874971,14.9204991 4.70924972,14.8942491 C5.81699965,15.6187491 7.15049957,16.038749 8.57849949,16.038749 L8.57849949,16.038749 Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+            >
+              <path
+                class="fm-SVGComponent_SocialPath"
+                fill="#A7A7A7"
+                fill-rule="evenodd"
+                d="M21,10.5641691 C21,4.72973531 16.2989941,0 10.5,0 C4.70100586,0 0  ,4.72973531 0,10.5641691 C0,15.8370512 3.83969824,20.207481 8.859375,21 L8.859375,13.6178742 L6.19335938,13.6178742 L6.19335938,10.5641691 L8.859375,10.5641691 L8.859375,8.23675057 C8.859375,5.5891057 10.4269512,4.12662854 12.8253809,4.12662854 C13.974167,4.12662854 15.1757812,4.33295997 15.1757812,4.33295997 L15.1757812,6.93273595 L13.8517559,6.93273595 C12.5473975,6.93273595 12.140625,7.7470642 12.140625,8.58250015 L12.140625,10.5641691 L15.0527344,10.5641691 L14.587207,13.6178742 L12.140625,13.6178742 L12.140625,21 C17.1603018,20.207481 21,15.8370512 21,10.5641691"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./assests/js/simple.js"></script>
+</html>
