@@ -1,19 +1,7 @@
 const elements = [
   {
-    button: document.getElementById("contactdetail"),
-    div: document.getElementById("contact_div"),
-  },
-  {
-    button: document.getElementById("password"),
-    div: document.getElementById("password_div"),
-  },
-  {
-    button: document.getElementById("verification"),
-    div: document.getElementById("verification_div"),
-  },
-  {
-    button: document.getElementById("residential"),
-    div: document.getElementById("residential_div"),
+    button: document.getElementById("activity"),
+    div: document.getElementById("activity_div"),
   },
 ];
 

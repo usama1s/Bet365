@@ -243,6 +243,6 @@ table .col {
 }
 
 .carousel-item img {
-  min-height: 220px;
+  min-height: 300px;
   object-fit: cover;
 }
