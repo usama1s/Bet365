@@ -22,7 +22,7 @@
   <body>
     <!-- Header -->
     <div
-      class="shadow-lg"
+      class="shadow-lg px-2"
       style="
         background-color: var(--backgroundPrimary);
         position: sticky;
@@ -36,10 +36,30 @@
         <i class="fa fa-bars" id="navbars"></i>
         <img src="" alt="logo" />
         <div>
-          <button class="btn" style="background: var(--buttonPrimary)">
-            Join
-          </button>
-          <button class="btn btn-transparent text-white">Login</button>
+          <div class="d-flex flex-col gap-2 align-items-center">
+            <div class="pe-4" style="cursor: pointer">
+              <img
+                src="./assests/img/icons8-search-96.png"
+                alt="search"
+                style="width: 30px"
+              />
+            </div>
+            <div>
+              <h6 class="m-0">RS. 0.00</h6>
+              <p class="m-0">Deposit</p>
+            </div>
+            <div
+              class="border p-1"
+              style="border-radius: 9999px; cursor: pointer"
+              id="userpopup"
+            >
+              <img
+                src="./assests/img/icons8-user-96.png"
+                alt="user"
+                style="width: 30px"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -395,205 +415,326 @@
         </nav>
       </div>
       <!-- Mid Body -->
+    </div>
+    <div
+      class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
+      id="balance"
+    >
+      <div class="col-2 p-3 rounded" style="background: var(--backgroundThird)">
+        <h3>My Account</h3>
+        <nav>
+          <ul class="navbar-nav ps-3 mt-2">
+            <li>
+              <a class="nav-link ps-2 border-start" href="#" id="contactdetail"
+                >Contact Detail</a
+              >
+            </li>
+            <li>
+              <a class="nav-link ps-2" href="#" id="residential"
+                >Residential Address</a
+              >
+            </li>
+            <li><a class="nav-link ps-2" href="#">Preferences</a></li>
+            <li>
+              <a class="nav-link ps-2" href="#" id="password">Password</a>
+            </li>
+            <li>
+              <a class="nav-link ps-2" href="#" id="verification"
+                >Verification</a
+              >
+            </li>
+            <li><a class="nav-link ps-2" href="#">Postal Verification</a></li>
+          </ul>
+        </nav>
+      </div>
       <div
-        class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
-        id="balance"
+        class="col-6 p-5 rounded"
+        style="background: var(--backgroundThird)"
+        id="contact_div"
       >
-        <div
-          class="col-2 p-3 rounded"
-          style="background: var(--backgroundThird)"
-        >
-          <h3>My Account</h3>
-          <nav>
-            <ul class="navbar-nav ps-3 mt-2">
-              <li>
-                <a
-                  class="nav-link ps-2 border-start"
-                  href="#"
-                  id="contactdetail"
-                  >Contact Detail</a
-                >
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#" id="residential"
-                  >Residential Address</a
-                >
-              </li>
-              <li><a class="nav-link ps-2" href="#">Preferences</a></li>
-              <li>
-                <a class="nav-link ps-2" href="#" id="password">Password</a>
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#" id="verification"
-                  >Verification</a
-                >
-              </li>
-              <li><a class="nav-link ps-2" href="#">Postal Verification</a></li>
-            </ul>
-          </nav>
+        <h3>Contact Detail</h3>
+        <label>Contact Number</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          value="00918877667766"
+          style="max-width: 450px"
+        />
+        <label class="mt-3">Email Address</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          value="drameshs0@gmail.com"
+          style="max-width: 450px"
+        />
+        <input
+          type="password"
+          class="form-control mt-4"
+          placeholder="password"
+          style="max-width: 450px"
+        />
+        <div class="d-flex gap-3 mt-3">
+          <button class="btn btn-success">Update</button>
+          <button class="btn btn-danger">Cancel</button>
         </div>
-        <div
-          class="col-6 p-5 rounded"
-          style="background: var(--backgroundThird)"
-          id="contact_div"
-        >
-          <h3>Contact Detail</h3>
-          <label>Contact Number</label>
-          <input
-            type="text"
-            class="form-control mt-2"
-            value="00918877667766"
-            style="max-width: 450px"
+      </div>
+      <div
+        id="password_div"
+        class="col-8 p-3 rounded"
+        style="display: none; background: var(--backgroundThird)"
+      >
+        <h3>Password</h3>
+        <h4>Change Passwod</h4>
+        <p>
+          Please use letters, numbers and accepted symbols only, with no spaces,
+          minimum 6, maximum 32 characters.
+        </p>
+        <p>
+          Your password should not contain your username, name, email address or
+          year of birth. You can increase the strength of your password by using
+          a mixture of letters, numbers and symbols. Please remember that
+          passwords are case-sensitive.
+        </p>
+        <p>The following symbols may be used as part of your password:</p>
+        <p>! # $ % &(),-./:; = ?@ [] {} ^* \ |</p>
+        <input
+          class="form-control my-3"
+          placeholder="Current Password"
+          style="max-width: 450px"
+        />
+        <input
+          class="form-control mb-3"
+          placeholder="New Password"
+          style="max-width: 450px"
+        />
+        <button class="btn btn-success">Update</button>
+      </div>
+      <div
+        class="col-8 p-3 rounded"
+        style="display: none; background: var(--backgroundThird)"
+        id="verification_div"
+      >
+        <h3>Verification</h3>
+        <h4>Upload your Identity Documents</h4>
+        <button class="mt-2 btn btn-transparent">
+          <img src="./assests/img/icons8-back-arrow-30.png" alt="back button" />
+        </button>
+        <div class="card mt-4" style="width: 20rem; margin: 0 auto">
+          <img
+            src="./assests/img/idcard.png"
+            class="card-img-top"
+            alt="idcard"
+            style="width: 220px; margin: 0 auto"
           />
-          <label class="mt-3">Email Address</label>
+          <div class="card-body">
+            <h5 class="card-title text-black">Upload Front of identity card</h5>
+            <p class="card-text text-black">
+              Upload a color image of the entire document. Screenshot are not
+              allowed. JPG, JPEG, or PNG format only.
+            </p>
+            <a href="#" class="btn btn-primary w-100">Choose File</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-8 p-3 rounded"
+        style="display: none; background: var(--backgroundThird)"
+        id="residential_div"
+      >
+        <h3>Residential Address</h3>
+        <h5>Your Address</h5>
+        <p>Country of Residence</p>
+        <h5>India</h5>
+        <p>If you need to change your Country of Residence please contact us</p>
+        <div class="text-center">
           <input
-            type="text"
-            class="form-control mt-2"
-            value="drameshs0@gmail.com"
-            style="max-width: 450px"
+            class="mt-3 form-control"
+            placeholder="Address line 1"
+            style="max-width: 450px; margin: 0 auto"
+          />
+          <label>If applicable</label>
+          <input
+            class="form-control"
+            placeholder="Address line 2"
+            style="max-width: 450px; margin: 0 auto"
+          />
+          <label>If applicable</label>
+          <input
+            class="form-control"
+            placeholder="Address line 3"
+            style="max-width: 450px; margin: 0 auto"
+          />
+          <input
+            class="form-control mt-3"
+            placeholder="Town/City"
+            style="max-width: 450px; margin: 0 auto"
+          />
+          <div class="form-group">
+            <label for="sel1">State:</label>
+            <span><img src="./assests/img/ic" alt="" /></span>
+            <select
+              class="form-control"
+              id="sel1"
+              style="max-width: 450px; margin: 0 auto"
+            >
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Goa</option>
+              <option>Chhattisgarh</option>
+            </select>
+          </div>
+          <input
+            class="form-control mt-3"
+            placeholder="Post Code"
+            style="max-width: 450px; margin: 0 auto"
           />
           <input
             type="password"
-            class="form-control mt-4"
-            placeholder="password"
-            style="max-width: 450px"
+            class="form-control mt-3"
+            placeholder="Password"
+            style="max-width: 450px; margin: 0 auto"
           />
           <div class="d-flex gap-3 mt-3">
             <button class="btn btn-success">Update</button>
             <button class="btn btn-danger">Cancel</button>
           </div>
         </div>
-        <div
-          id="password_div"
-          class="col-8 p-3 rounded"
-          style="display: none; background: var(--backgroundThird)"
-        >
-          <h3>Password</h3>
-          <h4>Change Passwod</h4>
-          <p>
-            Please use letters, numbers and accepted symbols only, with no
-            spaces, minimum 6, maximum 32 characters.
-          </p>
-          <p>
-            Your password should not contain your username, name, email address
-            or year of birth. You can increase the strength of your password by
-            using a mixture of letters, numbers and symbols. Please remember
-            that passwords are case-sensitive.
-          </p>
-          <p>The following symbols may be used as part of your password:</p>
-          <p>! # $ % &(),-./:; = ?@ [] {} ^* \ |</p>
-          <input
-            class="form-control my-3"
-            placeholder="Current Password"
-            style="max-width: 450px"
-          />
-          <input
-            class="form-control mb-3"
-            placeholder="New Password"
-            style="max-width: 450px"
-          />
-          <button class="btn btn-success">Update</button>
-        </div>
-        <div
-          class="col-8 p-3 rounded"
-          style="display: none; background: var(--backgroundThird)"
-          id="verification_div"
-        >
-          <h3>Verification</h3>
-          <h4>Upload your Identity Documents</h4>
-          <button class="mt-2 btn btn-transparent">
-            <img
-              src="./assests/img/icons8-back-arrow-30.png"
-              alt="back button"
-            />
-          </button>
-          <div class="card mt-4" style="width: 20rem; margin: 0 auto">
-            <img
-              src="./assests/img/idcard.png"
-              class="card-img-top"
-              alt="idcard"
-              style="width: 220px; margin: 0 auto"
-            />
-            <div class="card-body">
-              <h5 class="card-title text-black">
-                Upload Front of identity card
-              </h5>
-              <p class="card-text text-black">
-                Upload a color image of the entire document. Screenshot are not
-                allowed. JPG, JPEG, or PNG format only.
-              </p>
-              <a href="#" class="btn btn-primary w-100">Choose File</a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-8 p-3 rounded"
-          style="display: none; background: var(--backgroundThird)"
-          id="residential_div"
-        >
-          <h3>Residential Address</h3>
-          <h5>Your Address</h5>
-          <p>Country of Residence</p>
-          <h5>India</h5>
-          <p>
-            If you need to change your Country of Residence please contact us
-          </p>
-          <div class="text-center">
-            <input
-              class="mt-3 form-control"
-              placeholder="Address line 1"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <label>If applicable</label>
-            <input
-              class="form-control"
-              placeholder="Address line 2"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <label>If applicable</label>
-            <input
-              class="form-control"
-              placeholder="Address line 3"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <input
-              class="form-control mt-3"
-              placeholder="Town/City"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <div class="form-group">
-              <label for="sel1">State:</label>
-              <span><img src="./assests/img/ic" alt="" /></span>
-              <select
-                class="form-control"
-                id="sel1"
-                style="max-width: 450px; margin: 0 auto"
-              >
-                <option>Assam</option>
-                <option>Bihar</option>
-                <option>Goa</option>
-                <option>Chhattisgarh</option>
-              </select>
-            </div>
-            <input
-              class="form-control mt-3"
-              placeholder="Post Code"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <input
-              type="password"
-              class="form-control mt-3"
-              placeholder="Password"
-              style="max-width: 450px; margin: 0 auto"
-            />
-            <div class="d-flex gap-3 mt-3">
-              <button class="btn btn-success">Update</button>
-              <button class="btn btn-danger">Cancel</button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+
+    <div
+      class="p-3 rounded"
+      id="userpopupdiv"
+      style="
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        background: var(--backgroundOfwhite);
+        z-index: 200;
+        min-width: 350px;
+      "
+    >
+      <div class="d-flex gap-2 justify-content-between">
+        <div>
+          <p class="m-0">ramesh0608</p>
+          <div class="d-flex gap-2 align-items-center">
+            <h5 class="m-0">RS. 00</h5>
+            <img
+              src="./assests/img/icons8-update-left-rotation-30.png"
+              alt=""
+              style="width: 20px"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            class="btn text-white"
+            style="background: var(--backgroundThird)"
+          >
+            <img
+              src="./assests/img/icons8-downloading-updates-48.png"
+              alt="download"
+              style="width: 30px"
+            />
+            Deposit
+          </button>
+        </div>
+      </div>
+      <div class="d-flex gap2 justify-content-between align-items-center mt-2">
+        <div>
+          <p class="m-0">Withdrawable</p>
+          <h5>RS. 00</h5>
+        </div>
+        <div>
+          <p class="m-0">Bet Credits</p>
+          <h5>RS. 00</h5>
+        </div>
+        <div>Dropdown</div>
+      </div>
+      <hr />
+      <div>
+        <div class="d-flex flex-col gap-3">
+          <p class="m-0">Account</p>
+          <p class="m-0">Alerts</p>
+          <p class="m-0">My Offers</p>
+          <p class="m-0">Preferences</p>
+        </div>
+        <hr />
+      </div>
+      <div class="d-flex flex-wrap gap-2 justify-content-between">
+        <div class="text-center" style="width: 30%">
+          <img
+            src="./assests/img/icons8-card-wallet-64.png"
+            alt="wallet"
+            style="width: 40px; height: 40px"
+          />
+          <p>Wallet</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-group-message-48.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>Messages</p>
+        </div>
+        <div class="text-center" style="width: 30%">
+          <img
+            src="./assests/img/icons8-user-100.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>My Account</p>
+        </div>
+      </div>
+      <div class="d-flex gap-2 justify-content-between">
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-shield-100.png"
+            alt="wallet"
+            style="width: 40px; height: 40px"
+          />
+          <p>Gambling Controls</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-activity-50.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>My Activity</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-time-machine-30.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>History</p>
+        </div>
+      </div>
+      <div class="d-flex-gap-2 justify-content-betwee">
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-break-64.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>History</p>
+        </div>
+      </div>
+      <div>
+        <p class="m-0">Responsible Gambling</p>
+        <p class="m-0">Help</p>
+      </div>
+      <hr />
+      <div class="d-flex flex-col gap-3">
+        <p class="m-0">Logout</p>
+      </div>
+    </div>
+
+    <div id="userpopupoverlay"></div>
 
     <footer class="p-4 px-3" style="color: var(--textWhite)">
       <div class="d-flex gap-5 flex-wrap" id="footer">

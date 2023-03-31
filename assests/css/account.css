@@ -15,3 +15,24 @@
     width: 100%;
   }
 }
+
+@media (max-width: 576px) {
+  #userpopupdiv {
+    right: 0 !important;
+    min-width: auto;
+  }
+}
+
+.show {
+  display: block !important;
+}
+
+#userpopupoverlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  background: rgb(0, 0, 0, 0.5);
+}

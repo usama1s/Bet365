@@ -45,6 +45,10 @@ a {
   display: none;
 }
 
+tr {
+  border-bottom: 1px solid var(--backgroundPrimary);
+}
+
 #navclose {
   /* display: none; */
   padding: 10px 0;
@@ -216,8 +220,11 @@ table .col {
   #mobile_nav {
     display: block;
   }
-  #balance button .h6 {
+  #balance button img {
     display: none;
+  }
+  #balance {
+    width: 100%;
   }
 }
 

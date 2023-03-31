@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assests/css/style.css" />
+    <link rel="stylesheet" href="./assests/css/account.css" />
     <title>Balance</title>
   </head>
   <body>
@@ -33,11 +34,29 @@
       >
         <i class="fa fa-bars" id="navbars"></i>
         <img src="" alt="logo" />
-        <div>
-          <button class="btn" style="background: var(--buttonPrimary)">
-            Join
-          </button>
-          <button class="btn btn-transparent text-white">Login</button>
+        <div class="d-flex flex-col gap-2 align-items-center">
+          <div class="pe-4" style="cursor: pointer">
+            <img
+              src="./assests/img/icons8-search-96.png"
+              alt="search"
+              style="width: 30px"
+            />
+          </div>
+          <div>
+            <h6 class="m-0">RS. 0.00</h6>
+            <p class="m-0">Deposit</p>
+          </div>
+          <div
+            class="border p-1"
+            style="border-radius: 9999px; cursor: pointer"
+            id="userpopup"
+          >
+            <img
+              src="./assests/img/icons8-user-96.png"
+              alt="user"
+              style="width: 30px"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -392,74 +411,206 @@
           </ul>
         </nav>
       </div>
-      <!-- Mid Body -->
+    </div>
+    <!-- Mid Body -->
+    <div
+      class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
+      id="balance"
+    >
+      <div class="col-2 p-3 rounded" style="background: var(--backgroundThird)">
+        <h3>Bank</h3>
+        <nav>
+          <ul class="navbar-nav ps-3">
+            <li>
+              <a
+                class="nav-link ps-2"
+                style="border-left: 2px solid #fff"
+                href="#"
+                >Balance</a
+              >
+            </li>
+            <li><a class="nav-link" href="#">Deposit</a></li>
+            <li><a class="nav-link" href="#">Widthdraw</a></li>
+          </ul>
+        </nav>
+      </div>
       <div
-        class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
+        class="col-6 p-5 rounded"
+        style="background: var(--backgroundThird)"
         id="balance"
       >
-        <div
-          class="col-2 p-3 rounded"
-          style="background: var(--backgroundThird)"
-        >
-          <h3>Bank</h3>
-          <nav>
-            <ul class="navbar-nav ps-3">
-              <li>
-                <a
-                  class="nav-link ps-2"
-                  style="border-left: 2px solid #fff"
-                  href="#"
-                  >Balance</a
-                >
-              </li>
-              <li><a class="nav-link" href="#">Deposit</a></li>
-              <li><a class="nav-link" href="#">Widthdraw</a></li>
-            </ul>
-          </nav>
+        <h3>Balances</h3>
+        <div class="d-flex gap-2 justify-content-between px-2">
+          <p>Withdrawable</p>
+          <p class="font-weight-bold h5">RS. 0.00</p>
         </div>
-        <div
-          class="col-6 p-5 rounded"
-          style="background: var(--backgroundThird)"
-        >
-          <h3>Balances</h3>
-          <div class="d-flex gap-2 justify-content-between px-2">
-            <p>Withdrawable</p>
-            <p class="font-weight-bold h5">RS. 0.00</p>
-          </div>
-          <div class="d-flex gap-5 justify-content-center px-2">
-            <button
-              class="d-flex gap-2 align-items-center justify-content-center btn shadow-lg w-100 text-white"
-              style="background: var(--backgroundSecondary)"
-            >
-              <img src="./assests/img/icons8-request-money-30.png" alt="" />
-              <span class="h6">Deposit</span>
-            </button>
-            <button
-              class="d-flex gap-2 align-items-center justify-content-center btn shadow-lg w-100 text-white"
-              style="background: var(--backgroundSecondary)"
-            >
-              <img src="./assests/img/icons8-withdrawal-limit-30.png" alt="" />
-              <span class="h6">Withdraw</span>
-            </button>
-          </div>
-          <hr />
-          <h4>Bonuses and Bet Credits</h4>
-          <br />
-          <div class="d-flex gap-2 justify-content-between">
-            <p>Sports Bet Credit</p>
-            <p class="h5">RS. 0.00</p>
-          </div>
-          <div class="d-flex gap-2 justify-content-between">
-            <p>Casino bouns</p>
-            <p class="h5">RS. 0.00</p>
-          </div>
-          <div class="d-flex gap-2 justify-content-between">
-            <p>Live Casino Bonus</p>
-            <p class="h5">RS. 0.00</p>
-          </div>
+        <div class="d-flex gap-5 justify-content-center px-2">
+          <button
+            class="d-flex gap-2 align-items-center justify-content-center btn shadow-lg w-100 text-white"
+            style="background: var(--backgroundSecondary)"
+          >
+            <img src="./assests/img/icons8-request-money-30.png" alt="" />
+            <span class="h6">Deposit</span>
+          </button>
+          <button
+            class="d-flex gap-2 align-items-center justify-content-center btn shadow-lg w-100 text-white"
+            style="background: var(--backgroundSecondary)"
+          >
+            <img src="./assests/img/icons8-withdrawal-limit-30.png" alt="" />
+            <span class="h6">Withdraw</span>
+          </button>
+        </div>
+        <hr />
+        <h4>Bonuses and Bet Credits</h4>
+        <br />
+        <div class="d-flex gap-2 justify-content-between">
+          <p>Sports Bet Credit</p>
+          <p class="h5">RS. 0.00</p>
+        </div>
+        <div class="d-flex gap-2 justify-content-between">
+          <p>Casino bouns</p>
+          <p class="h5">RS. 0.00</p>
+        </div>
+        <div class="d-flex gap-2 justify-content-between">
+          <p>Live Casino Bonus</p>
+          <p class="h5">RS. 0.00</p>
         </div>
       </div>
     </div>
+
+    <div
+      class="p-3 rounded"
+      id="userpopupdiv"
+      style="
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        background: var(--backgroundOfwhite);
+        z-index: 200;
+        min-width: 350px;
+      "
+    >
+      <div class="d-flex gap-2 justify-content-between">
+        <div>
+          <p class="m-0">ramesh0608</p>
+          <div class="d-flex gap-2 align-items-center">
+            <h5 class="m-0">RS. 00</h5>
+            <img
+              src="./assests/img/icons8-update-left-rotation-30.png"
+              alt=""
+              style="width: 20px"
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            class="btn text-white"
+            style="background: var(--backgroundThird)"
+          >
+            <img
+              src="./assests/img/icons8-downloading-updates-48.png"
+              alt="download"
+              style="width: 30px"
+            />
+            Deposit
+          </button>
+        </div>
+      </div>
+      <div class="d-flex gap2 justify-content-between align-items-center mt-2">
+        <div>
+          <p class="m-0">Withdrawable</p>
+          <h5>RS. 00</h5>
+        </div>
+        <div>
+          <p class="m-0">Bet Credits</p>
+          <h5>RS. 00</h5>
+        </div>
+        <div>Dropdown</div>
+      </div>
+      <hr />
+      <div>
+        <div class="d-flex flex-col gap-3">
+          <p class="m-0">Account</p>
+          <p class="m-0">Alerts</p>
+          <p class="m-0">My Offers</p>
+          <p class="m-0">Preferences</p>
+        </div>
+        <hr />
+      </div>
+      <div class="d-flex flex-wrap gap-2 justify-content-between">
+        <div class="text-center" style="width: 30%">
+          <img
+            src="./assests/img/icons8-card-wallet-64.png"
+            alt="wallet"
+            style="width: 40px; height: 40px"
+          />
+          <p>Wallet</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-group-message-48.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>Messages</p>
+        </div>
+        <div class="text-center" style="width: 30%">
+          <img
+            src="./assests/img/icons8-user-100.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>My Account</p>
+        </div>
+      </div>
+      <div class="d-flex gap-2 justify-content-between">
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-shield-100.png"
+            alt="wallet"
+            style="width: 40px; height: 40px"
+          />
+          <p>Gambling Controls</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-activity-50.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>My Activity</p>
+        </div>
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-time-machine-30.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>History</p>
+        </div>
+      </div>
+      <div class="d-flex-gap-2 justify-content-betwee">
+        <div class="text-center" style="width: 33%">
+          <img
+            src="./assests/img/icons8-break-64.png"
+            alt="messages"
+            style="width: 40px; height: 40px"
+          />
+          <p>History</p>
+        </div>
+      </div>
+      <div>
+        <p class="m-0">Responsible Gambling</p>
+        <p class="m-0">Help</p>
+      </div>
+      <hr />
+      <div class="d-flex flex-col gap-3">
+        <p class="m-0">Logout</p>
+      </div>
+    </div>
+
+    <div id="userpopupoverlay"></div>
 
     <footer class="p-4 px-3" style="color: var(--textWhite)">
       <div class="d-flex gap-5 flex-wrap" id="footer">
@@ -736,4 +887,6 @@
     crossorigin="anonymous"
   ></script>
   <script src="./assests/js/simple.js"></script>
+  <script src="./assests/js/account.js"></script>
+
 </html>

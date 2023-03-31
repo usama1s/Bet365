@@ -15,14 +15,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assests/css/style.css" />
-    <link rel="stylesheet" href="./assests/css/account.css" />
-
-    <title>My Activity</title>
+    <title>Betting</title>
   </head>
   <body>
     <!-- Header -->
     <div
-      class="shadow-lg"
+      class="shadow-lg px-2"
       style="
         background-color: var(--backgroundPrimary);
         position: sticky;
@@ -35,29 +33,8 @@
       >
         <i class="fa fa-bars" id="navbars"></i>
         <img src="" alt="logo" />
-        <div class="d-flex flex-col gap-2 align-items-center">
-          <div class="pe-4" style="cursor: pointer">
-            <img
-              src="./assests/img/icons8-search-96.png"
-              alt="search"
-              style="width: 30px"
-            />
-          </div>
-          <div>
-            <h6 class="m-0">RS. 0.00</h6>
-            <p class="m-0">Deposit</p>
-          </div>
-          <div
-            class="border p-1"
-            style="border-radius: 9999px; cursor: pointer"
-            id="userpopup"
-          >
-            <img
-              src="./assests/img/icons8-user-96.png"
-              alt="user"
-              style="width: 30px"
-            />
-          </div>
+        <div>
+         <img src="./assests/img/icons8-close-50 -white.png" alt="close" style="width: 25px;">
         </div>
       </div>
     </div>
@@ -412,382 +389,107 @@
           </ul>
         </nav>
       </div>
-      <!-- Mid Body -->
-      <div
-        class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
-        id="balance"
-      >
-        <div
-          class="col-2 p-3 rounded"
-          style="background: var(--backgroundThird); max-height: 500px"
-        >
-          <h3>My Account</h3>
-          <nav>
-            <ul class="navbar-nav ps-3 mt-2">
-              <li>
-                <a class="nav-link ps-2 border-start" href="#" id="activity"
-                  >My Activity</a
-                >
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#">Deposit Limits</a>
-              </li>
-              <li><a class="nav-link ps-2" href="#">Time-Out</a></li>
-              <li>
-                <a class="nav-link ps-2" href="#">Self-Exclusion</a>
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#">Account Closure</a>
-              </li>
-              <li><a class="nav-link ps-2" href="#">Reality Checks</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div
-          class="col-6 p-5 rounded"
-          style="background: var(--backgroundThird)"
-          id="activity_div"
-        >
-          <h3>My Activity</h3>
-          <label>Contact Number</label>
-          <div class="d-flex gap-1 mt-3">
-            <button class="btn btn-success">7 Days</button>
-            <button
-              class="btn btn-transparent border"
-              style="color: var(--textWhite)"
-            >
-              30 Days
-            </button>
-            <button
-              class="btn btn-transparent border"
-              style="color: var(--textWhite)"
-            >
-              12 Months
-            </button>
-          </div>
-          <p class="mt-2" style="font-size: 12px">
-            The figures displayed here include transactions made up to midnight
-            on 03/03/2023 GMT+6, with the exception of Deposit Limit Data which
-            is real-time
-          </p>
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between">
-              <div>
-                <h4>
-                  Win/Loss
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>Your total returns minus your total stakes</p>
-              </div>
-              <h6>RS. 0</h6>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period.
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between">
-              <div>
-                <h4>
-                  Net Deposit
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>Your total deposits minus your total Withdrawals</p>
-              </div>
-              <h6>RS. 0</h6>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <div class="d-flex justify-content-center gap-2">
-              <div>
-                <p>Total Deposit</p>
-                <h4>RS. 0</h4>
-              </div>
-              <div>
-                <p>Total Withdrawals</p>
-                <h4>RS. 0</h4>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>Deposit Limits</h4>
-                <p>Limit the amount you are able to deposit</p>
-              </div>
-              <p>Change</p>
-            </div>
-            <p class="text-center">No Limits</p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Amount Staked
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Time Spent Playing
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <h5>0d 0h 0m</h5>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Reality Checks
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>A reminder of the time you have spent logged in</p>
-              </div>
-              <p>change</p>
-            </div>
-            <p class="text-center m-0">Checks every:</p>
-            <h6 class="text-center">No Checks</h6>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Time of Bet Placement
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center m-0">
-              There is no data available for the selected period
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-
+    <!-- Mid Body -->
     <div
-      class="p-4"
+      class="px-5 py-5 my-4 shadow-lg rounded"
+      id="midbody"
       style="
-        background-image: url(./assests/img/extraimages/persononmobile.jpg);
-        background-repeat: no-repeat;
-        max-width: 450px;
-        height: auto;
+        color: var(--textWhite);
+        margin: 0 auto;
+        background: var(--backgroundThird);
+        max-width: 600px;
         margin: 0 auto;
       "
     >
-      <div class="text-center m-2">
-        <p class="text-white">
-          Visit our dedicated Responsible Gambling site for helpful tools
-        </p>
-        <button class="btn btn-success">Find out more</button>
-      </div>
-    </div>
-
-    <div
-      class="p-3 rounded"
-      id="userpopupdiv"
-      style="
-        display: none;
-        position: fixed;
-        top: 60px;
-        right: 40px;
-        background: var(--backgroundOfwhite);
-        z-index: 200;
-        min-width: 350px;
-      "
-    >
-      <div class="d-flex gap-2 justify-content-between">
+      <div class="d-flex gap-4" style="overflow: auto; white-space: nowrap">
+        <div class="border-bottom pb-2">
+          <img src="" alt="compnay logo" />
+        </div>
         <div>
-          <p class="m-0">ramesh0608</p>
-          <div class="d-flex gap-2 align-items-center">
-            <h5 class="m-0">RS. 00</h5>
-            <img
-              src="./assests/img/icons8-update-left-rotation-30.png"
-              alt=""
-              style="width: 20px"
-            />
+          <img src="" alt="compnay logo" />
+        </div>
+        <div>
+          <img src="" alt="compnay logo" />
+        </div>
+        <div>
+          <img src="" alt="compnay logo" />
+        </div>
+        <div>
+          <img src="" alt="compnay logo" />
+        </div>
+      </div>
+      <div>
+        <h5 class="mt-2">Indian Net Banking</h5>
+        <div class="border p-3 text-center">
+          <p>
+            When you are making your first deposit, you will be required to
+            complete additional third party verification
+          </p>
+          <p>
+            Enter your Aadhaar ID as your Document ID to quickly complete
+            payment verification. Alternatively, enter your PAN card
+          </p>
+        </div>
+        <input
+          class="form-control my-3"
+          type="text"
+          placeholder="Aadhaar, PAN Card or Passport number"
+        />
+        <input
+          class="form-control my-3"
+          type="text"
+          placeholder="Deposit amount INR Min RS 500"
+        />
+        <div class="border p-3">
+          <h6>Open Account Offer - get up to RS 4,000 in Bet Credits</h6>
+          <p>
+            Enter your Aadhaar ID as your Document ID to quickly complete
+            payment verification. Alternatively, enter your PAN card
+          </p>
+          <div class="d-flex gap-2 align-items-center my-2">
+            <input type="checkbox" />
+            <p class="m-0">Claim RS 0.00 in Bet Credits</p>
           </div>
+          <p style="font-size: 14px">
+            We'll give you 15% of your qualifying deposit in Bet Credits (up to
+            RS. 4,000.00) when you meet the qualifying settled bet requirement
+            on your qualifying deposit (capped at RS. 26,666.67).
+          </p>
+          <p style="font-size: 12px">
+            Claim By 03 Apr 0731. Min deposit 400 INR. Min odds, bet and payment
+            method restrictions apply. Returns exclude Bet Credits stake. Time
+            limits and T&Cs apply
+          </p>
         </div>
-        <div>
-          <button
-            class="btn text-white"
-            style="background: var(--backgroundThird)"
-          >
-            <img
-              src="./assests/img/icons8-downloading-updates-48.png"
-              alt="download"
-              style="width: 30px"
-            />
-            Deposit
-          </button>
-        </div>
-      </div>
-      <div class="d-flex gap2 justify-content-between align-items-center mt-2">
-        <div>
-          <p class="m-0">Withdrawable</p>
-          <h5>RS. 00</h5>
-        </div>
-        <div>
-          <p class="m-0">Bet Credits</p>
-          <h5>RS. 00</h5>
-        </div>
-        <div>Dropdown</div>
-      </div>
-      <hr />
-      <div>
-        <div class="d-flex flex-col gap-3">
-          <p class="m-0">Account</p>
-          <p class="m-0">Alerts</p>
-          <p class="m-0">My Offers</p>
-          <p class="m-0">Preferences</p>
-        </div>
-        <hr />
-      </div>
-      <div class="d-flex flex-wrap gap-2 justify-content-between">
-        <div class="text-center" style="width: 30%">
+        <div class="d-flex gap-2 align-items-center my-2">
+          <h5>Set a deposit limits</h5>
           <img
-            src="./assests/img/icons8-card-wallet-64.png"
-            alt="wallet"
-            style="width: 40px; height: 40px"
+            src="./assests/img/icons8-information-64.png"
+            alt="info"
+            style="width: 20px"
           />
-          <p>Wallet</p>
         </div>
-        <div class="text-center" style="width: 33%">
-          <img
-            src="./assests/img/icons8-group-message-48.png"
-            alt="messages"
-            style="width: 40px; height: 40px"
-          />
-          <p>Messages</p>
-        </div>
-        <div class="text-center" style="width: 30%">
-          <img
-            src="./assests/img/icons8-user-100.png"
-            alt="messages"
-            style="width: 40px; height: 40px"
-          />
-          <p>My Account</p>
-        </div>
-      </div>
-      <div class="d-flex gap-2 justify-content-between">
-        <div class="text-center" style="width: 33%">
-          <img
-            src="./assests/img/icons8-shield-100.png"
-            alt="wallet"
-            style="width: 40px; height: 40px"
-          />
-          <p>Gambling Controls</p>
-        </div>
-        <div class="text-center" style="width: 33%">
-          <img
-            src="./assests/img/icons8-activity-50.png"
-            alt="messages"
-            style="width: 40px; height: 40px"
-          />
-          <p>My Activity</p>
-        </div>
-        <div class="text-center" style="width: 33%">
-          <img
-            src="./assests/img/icons8-time-machine-30.png"
-            alt="messages"
-            style="width: 40px; height: 40px"
-          />
-          <p>History</p>
-        </div>
-      </div>
-      <div class="d-flex-gap-2 justify-content-betwee">
-        <div class="text-center" style="width: 33%">
-          <img
-            src="./assests/img/icons8-break-64.png"
-            alt="messages"
-            style="width: 40px; height: 40px"
-          />
-          <p>History</p>
-        </div>
-      </div>
-      <div>
-        <p class="m-0">Responsible Gambling</p>
-        <p class="m-0">Help</p>
-      </div>
-      <hr />
-      <div class="d-flex flex-col gap-3">
-        <p class="m-0">Logout</p>
+        <label>Time Period</label>
+        <select class="form-select my-2" aria-label="Default select example">
+          <option selected>Please Select</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <label>Deposit limit amount INR</label>
+        <input class="form-control my-2" type="number" />
+        <p>
+          You can set additional deposit limits in the Gambling Controls section
+          Members area.
+        </p>
+        <button class="my-2 btn btn-success w-100">Depost</button>
+        <p style="font-size: 12px">Take a break</p>
+        <p class="m-0" style="font-size: 12px">
+          Restrict access to your account for specified period.
+        </p>
       </div>
     </div>
-
-    <div id="userpopupoverlay"></div>
 
     <footer class="p-4 px-3" style="color: var(--textWhite)">
       <div class="d-flex gap-5 flex-wrap" id="footer">
@@ -1064,5 +766,4 @@
     crossorigin="anonymous"
   ></script>
   <script src="./assests/js/simple.js"></script>
-  <script src="./assests/js/myactivity.js"></script>
 </html>

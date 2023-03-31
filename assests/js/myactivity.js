@@ -1,3 +1,15 @@
+const hide = document.getElementById("userpopup");
+const hidediv = document.getElementById("userpopupdiv");
+const userpopup = document.getElementById("userpopupoverlay");
+
+hide.addEventListener("click", showpopup);
+userpopup.addEventListener("click", showpopup);
+
+function showpopup() {
+  hidediv.classList.toggle("show");
+  userpopup.classList.toggle("show");
+}
+
 const elements = [
   {
     button: document.getElementById("activity"),

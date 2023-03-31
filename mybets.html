@@ -15,9 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assests/css/style.css" />
-    <link rel="stylesheet" href="./assests/css/account.css" />
-
-    <title>My Activity</title>
+    <title>Betting</title>
   </head>
   <body>
     <!-- Header -->
@@ -34,7 +32,11 @@
         class="d-flex justify-content-between align-items-center p-2 text-white mb-3"
       >
         <i class="fa fa-bars" id="navbars"></i>
-        <img src="" alt="logo" />
+        <div class="d-flex gap-3">
+          <p>Sports</p>
+          <p>In-Play</p>
+          <p class="border-bottom">My Bets</p>
+        </div>
         <div class="d-flex flex-col gap-2 align-items-center">
           <div class="pe-4" style="cursor: pointer">
             <img
@@ -412,246 +414,160 @@
           </ul>
         </nav>
       </div>
-      <!-- Mid Body -->
-      <div
-        class="d-flex gap-4 justify-content-center w-100 p-4 text-white"
-        id="balance"
-      >
+    </div>
+    <!-- Mid Body -->
+    <div
+      class="px-5 py-5 my-4 mx-4 shadow-lg rounded"
+      id="midbody"
+      style="
+        color: var(--textWhite);
+        margin: 0 auto;
+        background: var(--backgroundThird);
+      "
+    >
+      <div class="d-flex gap-2 flex-wrap">
+        <p class="m-0">Cash Out</p>
+        <p class="m-0">Live Now</p>
+        <p class="m-0">Unsettled</p>
+        <p class="m-0 border-bottom">Settled</p>
+        <p class="m-0">All</p>
+      </div>
+      <hr />
+      <div>
         <div
-          class="col-2 p-3 rounded"
-          style="background: var(--backgroundThird); max-height: 500px"
+          class="d-flex gap-3 flex-wrap justify-content-between align-items-center"
         >
-          <h3>My Account</h3>
-          <nav>
-            <ul class="navbar-nav ps-3 mt-2">
-              <li>
-                <a class="nav-link ps-2 border-start" href="#" id="activity"
-                  >My Activity</a
-                >
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#">Deposit Limits</a>
-              </li>
-              <li><a class="nav-link ps-2" href="#">Time-Out</a></li>
-              <li>
-                <a class="nav-link ps-2" href="#">Self-Exclusion</a>
-              </li>
-              <li>
-                <a class="nav-link ps-2" href="#">Account Closure</a>
-              </li>
-              <li><a class="nav-link ps-2" href="#">Reality Checks</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div
-          class="col-6 p-5 rounded"
-          style="background: var(--backgroundThird)"
-          id="activity_div"
-        >
-          <h3>My Activity</h3>
-          <label>Contact Number</label>
-          <div class="d-flex gap-1 mt-3">
-            <button class="btn btn-success">7 Days</button>
-            <button
-              class="btn btn-transparent border"
-              style="color: var(--textWhite)"
-            >
-              30 Days
-            </button>
-            <button
-              class="btn btn-transparent border"
-              style="color: var(--textWhite)"
-            >
-              12 Months
-            </button>
-          </div>
-          <p class="mt-2" style="font-size: 12px">
-            The figures displayed here include transactions made up to midnight
-            on 03/03/2023 GMT+6, with the exception of Deposit Limit Data which
-            is real-time
-          </p>
+          <h4>£ 200.00 Doubles</h4>
           <div
-            class="p-3 rounded my-1"
+            class="px-5 py-2 rounded"
             style="background: var(--backgroundPrimary)"
           >
-            <div class="d-flex justify-content-between">
-              <div>
-                <h4>
-                  Win/Loss
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>Your total returns minus your total stakes</p>
-              </div>
-              <h6>RS. 0</h6>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period.
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between">
-              <div>
-                <h4>
-                  Net Deposit
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>Your total deposits minus your total Withdrawals</p>
-              </div>
-              <h6>RS. 0</h6>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <div class="d-flex justify-content-center gap-2">
-              <div>
-                <p>Total Deposit</p>
-                <h4>RS. 0</h4>
-              </div>
-              <div>
-                <p>Total Withdrawals</p>
-                <h4>RS. 0</h4>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>Deposit Limits</h4>
-                <p>Limit the amount you are able to deposit</p>
-              </div>
-              <p>Change</p>
-            </div>
-            <p class="text-center">No Limits</p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Amount Staked
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Time Spent Playing
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <h5>0d 0h 0m</h5>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center">
-              There is no data available for the selected period
-            </p>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Reality Checks
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-                <p>A reminder of the time you have spent logged in</p>
-              </div>
-              <p>change</p>
-            </div>
-            <p class="text-center m-0">Checks every:</p>
-            <h6 class="text-center">No Checks</h6>
-          </div>
-
-          <div
-            class="p-3 rounded my-1"
-            style="background: var(--backgroundPrimary)"
-          >
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h4>
-                  Time of Bet Placement
-                  <span
-                    ><img
-                      src="./assests/img/icons8-information-64.png"
-                      alt="info"
-                      style="width: 20px; cursor: pointer"
-                  /></span>
-                </h4>
-              </div>
-              <p>25th Feb - 3rd Mar</p>
-            </div>
-            <p class="text-center m-0">
-              There is no data available for the selected period
-            </p>
+            <h6>Return</h6>
+            <h6>£69,000.00</h6>
           </div>
         </div>
+        <hr />
+        <div class="d-flex gap-2 justify-content-between my-3">
+          <div class="d-flex gap-2">
+            <img
+              src="./assests/img/icons8-checkmark-50.png"
+              alt="checkmark"
+              style="width: 20px; height: 20px"
+            />
+            <div>
+              <h5>Zurrieq FC 2-1</h5>
+              <p class="m-0">Correct Score</p>
+              <p class="m-0">Zurrieq FC v Vittoriosa Starts</p>
+            </div>
+          </div>
+          <h6>15.00</h6>
+        </div>
+        <div class="d-flex gap-2 justify-content-between">
+          <div class="d-flex gap-2">
+            <img
+              src="./assests/img/icons8-checkmark-50.png"
+              alt="checkmark"
+              style="width: 20px; height: 20px"
+            />
+            <div>
+              <h5>CD Real Santander 3-2</h5>
+              <p class="m-0">Correct Score</p>
+              <p class="m-0">CD Real Santander v Deportes Quindio</p>
+            </div>
+          </div>
+          <h6>23.00</h6>
+        </div>
+        <hr />
+        <div class="d-flex gap-5">
+          <div>
+            <p>Stake</p>
+            <h5>£ 200.00</h5>
+          </div>
+          <div>
+            <p>Return</p>
+            <h5>£ 69,000.00</h5>
+          </div>
+        </div>
+        <hr />
+        <h6 class="text-center">
+          View Order settled bet in your Account History
+        </h6>
       </div>
     </div>
 
-    <div
-      class="p-4"
-      style="
-        background-image: url(./assests/img/extraimages/persononmobile.jpg);
-        background-repeat: no-repeat;
-        max-width: 450px;
-        height: auto;
-        margin: 0 auto;
-      "
-    >
-      <div class="text-center m-2">
-        <p class="text-white">
-          Visit our dedicated Responsible Gambling site for helpful tools
-        </p>
-        <button class="btn btn-success">Find out more</button>
+    <div class="mt-2 px-3" style="overflow: auto; white-space: nowrap">
+      <h3 style="color: var(--textPrimary)">
+        Offers <span><img src="./assests/img/offers.svg" alt="" /></span>
+      </h3>
+      <div class="d-flex gap-2 mb-2">
+        <div
+          class="p-4"
+          style="
+            border-radius: 6px;
+            color: var(--textWhite);
+            background: var(--backgroundThird);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          "
+        >
+          <h5>2 Goals Ahead Early Payout</h5>
+          <p style="font-size: 12px">
+            Get bets paid out early. New & eligible customer only T&Cs apply.
+          </p>
+          <p style="font-size: 10px; margin: 0">
+            <a class="nav-link" href="#">More Detail</a>
+          </p>
+        </div>
+        <div
+          class="p-4"
+          style="
+            border-radius: 6px;
+            color: var(--textWhite);
+            background: var(--backgroundThird);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          "
+        >
+          <h5>2 Goals Ahead Early Payout</h5>
+          <p style="font-size: 12px">
+            Get bets paid out early. New & eligible customer only T&Cs apply.
+          </p>
+          <p style="font-size: 10px; margin: 0">
+            <a class="nav-link" href="#">More Detail</a>
+          </p>
+        </div>
+        <div
+          class="p-4"
+          style="
+            border-radius: 6px;
+            color: var(--textWhite);
+            background: var(--backgroundThird);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          "
+        >
+          <h5>2 Goals Ahead Early Payout</h5>
+          <p style="font-size: 12px">
+            Get bets paid out early. New & eligible customer only T&Cs apply.
+          </p>
+          <p style="font-size: 10px; margin: 0">
+            <a class="nav-link" href="#">More Detail</a>
+          </p>
+        </div>
+        <div
+          class="p-4"
+          style="
+            border-radius: 6px;
+            color: var(--textWhite);
+            background: var(--backgroundThird);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          "
+        >
+          <h5>2 Goals Ahead Early Payout</h5>
+          <p style="font-size: 12px">
+            Get bets paid out early. New & eligible customer only T&Cs apply.
+          </p>
+          <p style="font-size: 10px; margin: 0">
+            <a class="nav-link" href="#">More Detail</a>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -1064,5 +980,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="./assests/js/simple.js"></script>
-  <script src="./assests/js/myactivity.js"></script>
+  <script src="./assests/js/account.js"></script>
 </html>
